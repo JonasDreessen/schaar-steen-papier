@@ -21,17 +21,18 @@ function getRandomChoise(){
 function win(){
     userScore ++;
     userScore_span.innerHTML = userScore;
-    scoreMessage.innerHTML = "You Won!"
+    scoreMessage.innerHTML = "<span style='color: green;'>You Won!</span>";
 }
 
 function lose(){
     computerScore ++;
     computerScore_span.innerHTML = computerScore;
-    scoreMessage.innerHTML = "You Lost!"
+    scoreMessage.innerHTML = "<span style='color: red;'>You Lost!</span>"
 }
 
 function draw(){
     scoreMessage.innerHTML = "It's a Draw!"
+    
 }
 
 function Game(userChoise) {

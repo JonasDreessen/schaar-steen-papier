@@ -23,11 +23,22 @@ body{
     margin-right: auto;
     color: #ffffff;
     font-size: 1.17em;
+    border: 0.5px solid white;
+    width: 300px;
+    height: 100px;
+    margin-top: 20px;
+
 
     .score{
-
+        line-height: 100px;
         text-align: center;
     }
+}
+
+#score-message{
+    color: white;
+    text-align: center;
+    font-size: 2em;
 }
 .sspkeuze{
    text-align: center;
@@ -40,6 +51,10 @@ body{
     margin: 10px;
     background: grey;
     border: transparent;
+    border-color: transparent;
+    border-style: none;
+    border-width: 0;
+    
 
     :visited, :link, :hover{
         text-decoration: none;

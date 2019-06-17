@@ -1,3 +1,8 @@
+let userScore = 0;
+let computerScore = 0;
+let userScore_span = document.getElementById("user-score");
+let computerScore_span = document.getElementById("computer-score");
+let scoreMessage = document.getElementById("score-message");
 const schaar_div = document.getElementById("schaar");
 const steen_div = document.getElementById("steen");
 const papier_div = document.getElementById("papier");
@@ -14,15 +19,19 @@ function getRandomChoise(){
 }
 
 function win(){
-    console.log("win");
+    userScore ++;
+    userScore_span.innerHTML = userScore;
+    scoreMessage.innerHTML = "You Won!"
 }
 
 function lose(){
-    console.log("lose");
+    computerScore ++;
+    computerScore_span.innerHTML = computerScore;
+    scoreMessage.innerHTML = "You Lost!"
 }
 
 function draw(){
-    console.log("draw");
+    scoreMessage.innerHTML = "It's a Draw!"
 }
 
 function Game(userChoise) {

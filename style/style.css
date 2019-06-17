@@ -13,8 +13,16 @@ body {
   margin-right: auto;
 }
 
-.sspkeuze {
+.score-board {
   margin-left: auto;
   margin-right: auto;
+}
+
+.score-board .score {
+  text-align: center;
+}
+
+.sspkeuze {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

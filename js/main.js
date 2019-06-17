@@ -12,30 +12,55 @@ const papier_div = document.getElementById("papier");
 // Einde waarde van gebruiker knoppen bepalen
 
 // Computer choice
-function getRandomChoise(){
-    const choises = ["schaar","steen","papier"];
-    const randomNumber = Math.floor(Math.random()*3);
+function getRandomChoise() {
+    const choises = ["schaar", "steen", "papier"];
+    const randomNumber = Math.floor(Math.random() * 3);
     return choises[randomNumber];
 }
 
-function win(){
-    userScore ++;
+function win() {
+    userScore++;
     userScore_span.innerHTML = userScore;
     scoreMessage.innerHTML = "<span style='color: green;'>You Won!</span>";
 }
 
-function lose(){
-    computerScore ++;
+function lose() {
+    computerScore++;
     computerScore_span.innerHTML = computerScore;
     scoreMessage.innerHTML = "<span style='color: red;'>You Lost!</span>"
 }
 
-function draw(){
+function draw() {
     scoreMessage.innerHTML = "It's a Draw!"
-    
+
 }
 
+
 function Game(userChoise) {
+    const computerChoise = getRandomChoise();
+    if (userChoise + computerChoise === "steenschaar") {
+        win();
+    } else if (userChoise + computerChoise === "papiersteen") {
+        win();
+    } else if (userChoise + computerChoise === "schaarpapier") {
+        win();
+    } else if (userChoise + computerChoise === "steenpapier") {
+        lose();
+    } else if (userChoise + computerChoise === "papierschaar") {
+        lose();
+    } else if (userChoise + computerChoise === "schaarsteen") {
+        lose();
+    } else if (userChoise + computerChoise === "schaarschaar") {
+        draw();
+    } else if (userChoise + computerChoise === "steensteen") {
+        draw();
+    } else if (userChoise + computerChoise === "papierpapier") {
+        draw();
+    }
+
+
+}
+/*function Game(userChoise) {
     const computerChoise = getRandomChoise();
     switch(userChoise + computerChoise){
         case "steenschaar":
@@ -55,7 +80,7 @@ function Game(userChoise) {
             break;
 
     }
-}
+}*/
 
 
 

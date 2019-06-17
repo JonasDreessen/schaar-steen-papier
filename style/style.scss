@@ -5,22 +5,49 @@
 body{
     width: 100%;
     height: 100%;
+    background-color: #293241;
 }
 
+.pageHeadingRow{
+    background-color: #ffffff;
+}
 .pageHeading{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+
 }
 
 .score-board{
     margin-left: auto;
     margin-right: auto;
+    color: #ffffff;
+    font-size: 1.17em;
 
     .score{
+
         text-align: center;
     }
 }
 .sspkeuze{
    text-align: center;
+}
+
+.choosingButton{
+    border-radius: 100px;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    background: grey;
+    border: transparent;
+
+    :visited, :link, :hover{
+        text-decoration: none;
+    }
+
+    i{
+        :visited, :link, :hover{
+            text-decoration: none;
+        }
+    }
 }

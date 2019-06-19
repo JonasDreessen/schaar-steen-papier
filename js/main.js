@@ -6,15 +6,11 @@ let scoreMessage = document.getElementById("score-message");
 const schaar_div = document.getElementById("schaar");
 const steen_div = document.getElementById("steen");
 const papier_div = document.getElementById("papier");
-// Waarde van gebruiker knoppen bepalen
-
-
-// Einde waarde van gebruiker knoppen bepalen
 
 // Computer choice
 function getRandomChoise() {
     const choises = ["schaar", "steen", "papier"];
-    const randomNumber = Math.floor(Math.random() * 3);
+    const randomNumber = Math.floor(Math.random() * choises.length);
     return choises[randomNumber];
 }
 
